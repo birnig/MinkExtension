@@ -355,6 +355,13 @@ class Extension implements ExtensionInterface
                                         arrayNode('extensions')->
                                             prototype('scalar')->end()->
                                         end()->
+                                        arrayNode('options')->
+                                            children()->
+                                                arrayNode('args')->
+                                                    prototype('scalar')->end()->
+                                                end()->
+                                            end()->
+                                        end()->
                                     end()->
                                 end()->
                             end()->

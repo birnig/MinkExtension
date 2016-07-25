@@ -305,6 +305,9 @@ class Extension implements ExtensionInterface
                                 scalarNode('max-duration')->
                                     defaultValue(isset($config['selenium2']['capabilities']['max-duration']) ? $config['selenium2']['capabilities']['max-duration'] : '300')->
                                 end()->
+                                scalarNode('newCommandTimeout')->
+                                    defaultValue(isset($config['selenium2']['capabilities']['newCommandTimeout']) ? $config['selenium2']['capabilities']['newCommandTimeout'] : '60')->
+                                end()->
                                 booleanNode('javascriptEnabled')->end()->
                                 booleanNode('databaseEnabled')->end()->
                                 booleanNode('locationContextEnabled')->end()->

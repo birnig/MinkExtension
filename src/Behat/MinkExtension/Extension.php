@@ -308,6 +308,15 @@ class Extension implements ExtensionInterface
                                 scalarNode('newCommandTimeout')->
                                     defaultValue(isset($config['selenium2']['capabilities']['newCommandTimeout']) ? $config['selenium2']['capabilities']['newCommandTimeout'] : '60')->
                                 end()->
+                                scalarNode('deviceName')->
+                                    defaultValue(isset($config['selenium2']['capabilities']['deviceName']) ? $config['selenium2']['capabilities']['deviceName'] : '')->
+                                end()->
+                                scalarNode('app')->
+                                    defaultValue(isset($config['selenium2']['capabilities']['app']) ? $config['selenium2']['capabilities']['app'] : '')->
+                                end()->
+                                scalarNode('udid')->
+                                    defaultValue(isset($config['selenium2']['capabilities']['udid']) ? $config['selenium2']['capabilities']['udid'] : '')->
+                                end()->
                                 booleanNode('javascriptEnabled')->end()->
                                 booleanNode('databaseEnabled')->end()->
                                 booleanNode('locationContextEnabled')->end()->

@@ -360,6 +360,9 @@ class Extension implements ExtensionInterface
                                                 arrayNode('args')->
                                                     prototype('scalar')->end()->
                                                 end()->
+                                                arrayNode('prefs')->
+                                                    prototype('scalar')->end()->
+                                                end()->
                                             end()->
                                         end()->
                                     end()->
